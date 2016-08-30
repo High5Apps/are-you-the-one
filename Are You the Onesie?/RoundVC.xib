@@ -63,7 +63,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfX-yx-i8h">
                     <rect key="frame" x="8" y="69" width="304" height="83"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">Pick who's going on dates this week by playing any type of game. While they're on dates, everyone else chooses one of the couples to send to the truth booth.</string>
+                    <string key="text">Pick who's going on dates this round by playing any type of game. While the winners are on dates, everyone else chooses one of those couples to send to the truth booth.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
