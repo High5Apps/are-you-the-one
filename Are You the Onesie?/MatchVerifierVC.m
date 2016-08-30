@@ -41,9 +41,9 @@
                             [UIColor greenColor],
                             [UIColor cyanColor],
                             [UIColor purpleColor],
+                            [UIColor yellowColor],
                             [UIColor brownColor],
-                            [UIColor darkGrayColor],
-                            [UIColor yellowColor]];
+                            [UIColor darkGrayColor]];
     }
     return self;
 }
