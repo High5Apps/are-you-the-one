@@ -122,6 +122,10 @@
     self.nextRoundInstructions.hidden = (correctMatches == nil) || self.didWin;
     self.youWinLabel.hidden = (correctMatches == nil) || !self.didWin;
     
+    if (correctMatches) {
+        self.perfectMatchCountLabel.text = [NSString stringWithFormat:@"%@", correctMatches];
+    }
+    
     BOOL isGuysRound = self.roundNumber % 2 == 0;
     
     NSString *gender;
