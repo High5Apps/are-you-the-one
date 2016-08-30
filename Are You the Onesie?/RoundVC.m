@@ -43,13 +43,6 @@
     [self setRound:1];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    
-    self.lightCeremonyButton.enabled = YES;
-    self.lightCeremonyButton.hidden = NO;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
