@@ -28,11 +28,6 @@
                                         </constraints>
                                         <items>
                                             <navigationItem title="Add Players" id="cOb-l0-piV" userLabel="Add Players">
-                                                <barButtonItem key="leftBarButtonItem" title="Test" id="Oh3-mj-H6D">
-                                                    <connections>
-                                                        <action selector="testPressed:" destination="BYZ-38-t0r" id="ct7-SU-sMr"/>
-                                                    </connections>
-                                                </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" enabled="NO" title="Start" id="9se-wY-7FV">
                                                     <connections>
                                                         <action selector="startPressed:" destination="BYZ-38-t0r" id="lgd-hL-Dqg"/>
