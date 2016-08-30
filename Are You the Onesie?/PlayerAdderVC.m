@@ -90,13 +90,15 @@
 - (void)addName:(NSString *)name isGuy:(BOOL)isGuy{
     if (isGuy) {
         [self.guys addObject:name];
+        [self.guyTable setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
+        [self.guyTable reloadData];
     }else{
         [self.girls addObject:name];
+        [self.girlTable setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
+        [self.girlTable reloadData];
     }
     
     self.startButton.enabled = [self shouldEnableStart];
-    [self.guyTable reloadData];
-    [self.girlTable reloadData];
 }
 
 - (BOOL)shouldEnableStart{
