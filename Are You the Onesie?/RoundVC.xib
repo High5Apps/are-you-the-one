@@ -74,15 +74,8 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5A-oz-c53">
-                    <rect key="frame" x="212" y="36" width="99" height="30"/>
-                    <state key="normal" title="&gt;"/>
-                    <connections>
-                        <action selector="nextRoundPressed:" destination="-1" eventType="touchUpInside" id="IkM-TX-e5f"/>
-                    </connections>
-                </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmS-A4-XfB">
-                    <rect key="frame" x="8" y="36" width="101" height="30"/>
+                    <rect key="frame" x="8" y="29" width="101" height="44"/>
                     <state key="normal" title="&lt;"/>
                     <connections>
                         <action selector="previousRoundPressed:" destination="-1" eventType="touchUpInside" id="Pd1-6a-6En"/>
@@ -117,6 +110,13 @@
                     <state key="normal" title="Quit"/>
                     <connections>
                         <action selector="quitPressed:" destination="-1" eventType="touchUpInside" id="b1e-3X-rRR"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5A-oz-c53">
+                    <rect key="frame" x="212" y="29" width="99" height="44"/>
+                    <state key="normal" title="&gt;"/>
+                    <connections>
+                        <action selector="nextRoundPressed:" destination="-1" eventType="touchUpInside" id="IkM-TX-e5f"/>
                     </connections>
                 </button>
             </subviews>
