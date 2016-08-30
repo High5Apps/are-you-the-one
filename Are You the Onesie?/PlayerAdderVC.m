@@ -107,7 +107,7 @@
 
 - (BOOL)shouldEnableAddButton{
     NSString *name = self.nameField.text;
-    return (name.length > 0) && ![self.guys containsObject:name] && ![self.girls containsObject:name] && (self.guys.count < 8);
+    return (name.length > 0) && ![self.guys containsObject:name] && ![self.girls containsObject:name] && (self.girls.count < 8);
 }
 
 - (BOOL)shouldAddGuy{
