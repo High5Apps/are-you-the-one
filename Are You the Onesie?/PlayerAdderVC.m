@@ -149,6 +149,8 @@
     self.startButton.enabled = [self shouldEnableStart];
     [self.guyTable reloadData];
     [self.girlTable reloadData];
+    
+    self.nameField.text = @"";
 }
 
 #pragma mark - UITableViewDataSource methods
