@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoundVC">
+            <connections>
+                <outlet property="lightCeremonyButton" destination="shT-r4-eHu" id="HJR-8m-Zns"/>
+                <outlet property="lightCeremonyInstructions" destination="5bM-rn-fpf" id="c9o-3r-cwe"/>
+                <outlet property="nextRoundButton" destination="f5A-oz-c53" id="Upc-rR-dx6"/>
+                <outlet property="nextRoundInstructions" destination="xkK-Rv-ZFP" id="7N3-go-xbz"/>
+                <outlet property="pairLabel" destination="iLs-js-XTo" id="AzP-GB-bhE"/>
+                <outlet property="perfectMatchCountLabel" destination="FoQ-ik-hRF" id="hAh-KJ-Qbs"/>
+                <outlet property="perfectMatchLabel" destination="zQx-xO-rde" id="BMX-8Y-Ygh"/>
+                <outlet property="previousRoundButton" destination="PmS-A4-XfB" id="voi-Pb-Lvx"/>
+                <outlet property="quitButton" destination="ajY-ZB-saL" id="gJV-SG-zwj"/>
+                <outlet property="roundLabel" destination="6nu-0a-bXx" id="NAU-Eg-UOf"/>
+                <outlet property="truthBoothButton" destination="2OU-At-Df1" id="Q1S-76-qRF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wasMatchLabel" destination="UfD-dR-AVc" id="zP2-KQ-oxJ"/>
+                <outlet property="youWinLabel" destination="KcR-np-gRt" id="HiV-8U-J4V"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shT-r4-eHu">
+                    <rect key="frame" x="8" y="333" width="109" height="30"/>
+                    <state key="normal" title="Light Ceremony"/>
+                    <connections>
+                        <action selector="lightCeremonyPressed:" destination="-1" eventType="touchUpInside" id="7xZ-ZY-9dH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OU-At-Df1">
+                    <rect key="frame" x="8" y="160" width="82" height="30"/>
+                    <state key="normal" title="Truth Booth"/>
+                    <connections>
+                        <action selector="truthBoothPressed:" destination="-1" eventType="touchUpInside" id="Uss-37-QR1"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guy and Girl:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLs-js-XTo">
+                    <rect key="frame" x="8" y="198" width="206" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Match!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfD-dR-AVc">
+                    <rect key="frame" x="222" y="198" width="90" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Round: 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-0a-bXx">
+                    <rect key="frame" x="117" y="40" width="87" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfX-yx-i8h">
+                    <rect key="frame" x="8" y="69" width="304" height="83"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Pick who's going on dates this week by playing any type of game. While they're on dates, everyone else chooses one of the couples to send to the truth booth.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bM-rn-fpf">
+                    <rect key="frame" x="8" y="242" width="303" height="83"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">This round, the &lt;guys&gt; get to pick who they think their perfect match is. If all &lt;n&gt; lights are illuminated, you're all going home with... ONE MILLION DOLLARS!!!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5A-oz-c53">
+                    <rect key="frame" x="212" y="36" width="99" height="30"/>
+                    <state key="normal" title="&gt;"/>
+                    <connections>
+                        <action selector="nextRoundPressed:" destination="-1" eventType="touchUpInside" id="IkM-TX-e5f"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmS-A4-XfB">
+                    <rect key="frame" x="8" y="36" width="101" height="30"/>
+                    <state key="normal" title="&lt;"/>
+                    <connections>
+                        <action selector="previousRoundPressed:" destination="-1" eventType="touchUpInside" id="Pd1-6a-6En"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfect  matches:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQx-xO-rde">
+                    <rect key="frame" x="8" y="371" width="206" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoQ-ik-hRF">
+                    <rect key="frame" x="222" y="371" width="90" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="When you're ready, tap the right arrow to move on to the next round." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkK-Rv-ZFP">
+                    <rect key="frame" x="8" y="400" width="303" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Win!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcR-np-gRt">
+                    <rect key="frame" x="90" y="447" width="139" height="49"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajY-ZB-saL">
+                    <rect key="frame" x="212" y="516" width="100" height="44"/>
+                    <state key="normal" title="Quit"/>
+                    <connections>
+                        <action selector="quitPressed:" destination="-1" eventType="touchUpInside" id="b1e-3X-rRR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
