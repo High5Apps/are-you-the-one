@@ -6,14 +6,14 @@
 //  Copyright © 2016 High5! Apps. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PlayerAdderVC.h"
 
-@interface ViewController ()
+@interface PlayerAdderVC ()
 @property (strong, nonatomic) NSMutableArray *guys;
 @property (strong, nonatomic) NSMutableArray *girls;
 @end
 
-@implementation ViewController
+@implementation PlayerAdderVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

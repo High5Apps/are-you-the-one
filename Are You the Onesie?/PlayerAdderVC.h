@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RoundVC.h"
 
-@interface ViewController : UIViewController<RoundVCDelegate, UITableViewDataSource, UITextFieldDelegate>
+@interface PlayerAdderVC : UIViewController<RoundVCDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *startButton;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;

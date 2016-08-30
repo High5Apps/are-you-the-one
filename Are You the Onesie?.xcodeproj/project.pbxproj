@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C20CF8221D7258ED00E4EC0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8211D7258ED00E4EC0A /* main.m */; };
 		C20CF8251D7258ED00E4EC0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8241D7258ED00E4EC0A /* AppDelegate.m */; };
-		C20CF8281D7258ED00E4EC0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8271D7258ED00E4EC0A /* ViewController.m */; };
+		C20CF8281D7258ED00E4EC0A /* PlayerAdderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8271D7258ED00E4EC0A /* PlayerAdderVC.m */; };
 		C20CF82B1D7258ED00E4EC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20CF8291D7258ED00E4EC0A /* Main.storyboard */; };
 		C20CF82D1D7258ED00E4EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20CF82C1D7258ED00E4EC0A /* Assets.xcassets */; };
 		C20CF8301D7258ED00E4EC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20CF82E1D7258ED00E4EC0A /* LaunchScreen.storyboard */; };
@@ -45,8 +45,8 @@
 		C20CF8211D7258ED00E4EC0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C20CF8231D7258ED00E4EC0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C20CF8241D7258ED00E4EC0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C20CF8261D7258ED00E4EC0A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C20CF8271D7258ED00E4EC0A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C20CF8261D7258ED00E4EC0A /* PlayerAdderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerAdderVC.h; sourceTree = "<group>"; };
+		C20CF8271D7258ED00E4EC0A /* PlayerAdderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerAdderVC.m; sourceTree = "<group>"; };
 		C20CF82A1D7258ED00E4EC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C20CF82C1D7258ED00E4EC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C20CF82F1D7258ED00E4EC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 			children = (
 				C20CF8231D7258ED00E4EC0A /* AppDelegate.h */,
 				C20CF8241D7258ED00E4EC0A /* AppDelegate.m */,
-				C20CF8261D7258ED00E4EC0A /* ViewController.h */,
-				C20CF8271D7258ED00E4EC0A /* ViewController.m */,
+				C20CF8261D7258ED00E4EC0A /* PlayerAdderVC.h */,
+				C20CF8271D7258ED00E4EC0A /* PlayerAdderVC.m */,
 				C20CF8291D7258ED00E4EC0A /* Main.storyboard */,
 				C2DCE3701D72628500E07036 /* RoundVC.h */,
 				C2DCE3711D72628500E07036 /* RoundVC.m */,
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C20CF8281D7258ED00E4EC0A /* ViewController.m in Sources */,
+				C20CF8281D7258ED00E4EC0A /* PlayerAdderVC.m in Sources */,
 				C2FA6DBE1D73BEDE009DA462 /* LightCeremonyVC.m in Sources */,
 				C2DCE3731D72628500E07036 /* RoundVC.m in Sources */,
 				C20CF8251D7258ED00E4EC0A /* AppDelegate.m in Sources */,
