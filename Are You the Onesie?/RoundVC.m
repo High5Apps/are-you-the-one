@@ -7,6 +7,7 @@
 //
 
 #import "RoundVC.h"
+#import "Colors.h"
 
 #define KEY_TRUTH_BOOTH @"truth-booth-pair"
 #define KEY_LIGHT_CEREMONY @"light-ceremony-count"
@@ -18,7 +19,6 @@
 @property (strong, nonatomic) NSMutableDictionary *roundsInfo;
 @property int roundNumber;
 @property BOOL didWin;
-//@property int correctMatchesCount;
 @end
 
 @implementation RoundVC
@@ -39,6 +39,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.view.backgroundColor = [Colors lightBackgroundColor];
     
     UIBarButtonItem *nextRoundButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(nextRoundPressed:)];
     self.navigationItem.rightBarButtonItem = nextRoundButton;
@@ -71,7 +73,6 @@
     truthBoothVC.delegate = self;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:truthBoothVC];
-    navigationController.navigationBar.translucent = NO;
     
     [self presentViewController:navigationController animated:YES completion:nil];
 }
@@ -81,7 +82,6 @@
     lightCeremonyVC.delegate = self;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:lightCeremonyVC];
-    navigationController.navigationBar.translucent = NO;
     
     [self presentViewController:navigationController animated:YES completion:nil];
 }

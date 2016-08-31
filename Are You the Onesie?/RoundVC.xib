@@ -64,7 +64,7 @@
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfX-yx-i8h">
                     <rect key="frame" x="8" y="0.0" width="304" height="83"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="83" id="kIm-wK-8Ym"/>
                     </constraints>
@@ -74,7 +74,7 @@
                 </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bM-rn-fpf">
                     <rect key="frame" x="8" y="173" width="303" height="83"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="83" id="IbW-I2-kDx"/>
                     </constraints>
@@ -102,7 +102,7 @@
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When you're ready, tap the right arrow to move on to the next round." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkK-Rv-ZFP">
                     <rect key="frame" x="8" y="331" width="303" height="50"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="nQx-R7-TfU"/>
                     </constraints>
@@ -130,7 +130,6 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="2OU-At-Df1" firstAttribute="top" secondItem="GfX-yx-i8h" secondAttribute="bottom" constant="8" id="3iE-4t-Tac"/>
                 <constraint firstAttribute="trailing" secondItem="ajY-ZB-saL" secondAttribute="trailing" constant="8" id="4E7-LQ-2Fw"/>

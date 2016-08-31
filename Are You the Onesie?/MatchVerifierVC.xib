@@ -26,6 +26,7 @@
                 <outlet property="guy7" destination="QzL-ED-Yie" id="v8T-7V-hWI"/>
                 <outlet property="guy8" destination="rmc-QX-Cs0" id="fvu-wQ-Si3"/>
                 <outlet property="guyLabel" destination="LXZ-eI-dcL" id="yT7-9B-6cg"/>
+                <outlet property="instructionLabel" destination="dRi-F5-CbL" id="MLC-zq-CRC"/>
                 <outlet property="lockLabel" destination="zpq-bh-dQU" id="kIg-tJ-iWq"/>
                 <outlet property="scanningLineView" destination="UG9-6U-svd" id="0f9-sX-WFa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

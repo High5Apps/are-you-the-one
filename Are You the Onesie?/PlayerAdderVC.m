@@ -7,6 +7,8 @@
 //
 
 #import "PlayerAdderVC.h"
+#import <QuartzCore/QuartzCore.h>
+#import "Colors.h"
 
 @interface PlayerAdderVC ()
 @property (strong, nonatomic) NSMutableArray *guys;
@@ -19,7 +21,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.guys = [NSMutableArray array];
+    self.girls = [NSMutableArray array];
+    
     [self setTitle:@"Add Players"];
+    
+    self.view.backgroundColor = [Colors lightBackgroundColor];
     
     UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleDone target:self action:@selector(startPressed:)];
     self.navigationItem.rightBarButtonItem = startButton;
@@ -28,12 +35,17 @@
 //    UIBarButtonItem *testButton = [[UIBarButtonItem alloc] initWithTitle:@"Test" style:UIBarButtonItemStylePlain target:self action:@selector(testPressed:)];
 //    self.navigationItem.leftBarButtonItem = testButton;
     
-    self.guys = [NSMutableArray array];
-    self.girls = [NSMutableArray array];
-    
+    [self styleNameField];
     self.nameField.delegate = self;
     
     self.startButton.enabled = [self shouldEnableStart];
+}
+
+- (void)styleNameField{
+    self.nameField.layer.cornerRadius = 0.0f;
+    self.nameField.layer.masksToBounds = YES;
+    self.nameField.layer.borderColor = [Colors borderColor].CGColor;
+    self.nameField.layer.borderWidth = 1.0f;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +76,6 @@
     RoundVC *roundVC = [[RoundVC alloc] initWithGuys:self.guys girls:self.girls matches:matches];
     roundVC.delegate = self;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:roundVC];
-    navigationController.navigationBar.translucent = NO;
     
     [self presentViewController:navigationController animated:YES completion:nil];
 }
@@ -196,6 +207,7 @@
     if (!nameCell) {
         nameCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         nameCell.textLabel.textAlignment = NSTextAlignmentCenter;
+        nameCell.backgroundColor = [UIColor clearColor];
     }
     
     BOOL isGuyCell = (tableView == self.guyTable);

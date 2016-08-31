@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PlayerAdderVC.h"
+#import "Colors.h"
 
 @interface AppDelegate ()
 
@@ -22,8 +23,12 @@
 
     PlayerAdderVC *playerAdderVC = [[PlayerAdderVC alloc] initWithNibName:@"PlayerAdderVC" bundle:nil];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:playerAdderVC];
-    navigationController.navigationBar.translucent = NO;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:playerAdderVC];    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [Colors navigationBarTitleColor]}];
+    [[UINavigationBar appearance] setBarTintColor:[Colors navigationBarColor]];
+    [[UINavigationBar appearance] setTintColor:[Colors navigationBarTitleColor]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    [[UINavigationBar appearance] setTranslucent:NO];
     
     self.window.rootViewController = navigationController;
     

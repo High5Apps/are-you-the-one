@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *guyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *girlLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lockLabel;

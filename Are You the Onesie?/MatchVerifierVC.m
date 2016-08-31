@@ -7,6 +7,7 @@
 //
 
 #import "MatchVerifierVC.h"
+#import "Colors.h"
 
 #define LOCK_SECONDS 4
 
@@ -85,6 +86,8 @@
         [girlButton setTitle:(NSString *)[self.girls objectAtIndex:i] forState:UIControlStateNormal];
         [self addActionsToNameButton:girlButton];
     }
+    
+    [self setColorSchemeDark:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -165,11 +168,13 @@
 - (void)setColorSchemeDark:(BOOL)shouldBeDark{
     if (shouldBeDark) {
         self.view.backgroundColor = [UIColor blackColor];
+        self.instructionLabel.textColor = [UIColor whiteColor];
         self.guyLabel.textColor = [UIColor whiteColor];
         self.girlLabel.textColor = [UIColor whiteColor];
         self.lockLabel.textColor = [UIColor whiteColor];
     }else{
-        self.view.backgroundColor = [UIColor whiteColor];
+        self.view.backgroundColor = [Colors lightBackgroundColor];
+        self.instructionLabel.textColor = [UIColor blackColor];
         self.guyLabel.textColor = [UIColor blackColor];
         self.girlLabel.textColor = [UIColor blackColor];
         self.lockLabel.textColor = [UIColor blackColor];
