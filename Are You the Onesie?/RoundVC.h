@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *roundLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextRoundButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousRoundButton;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *truthBoothButton;
 @property (weak, nonatomic) IBOutlet UILabel *pairLabel;
 @property (weak, nonatomic) IBOutlet UILabel *wasMatchLabel;

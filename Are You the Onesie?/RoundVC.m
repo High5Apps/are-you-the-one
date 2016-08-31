@@ -50,6 +50,8 @@
     self.navigationItem.leftBarButtonItem = previousRoundButton;
     self.previousRoundButton = previousRoundButton;
     
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.youWinLabel.frame.origin.y + self.youWinLabel.frame.size.height);
+    
     [self setRound:1];
 }
 
@@ -115,7 +117,7 @@
     self.title = [NSString stringWithFormat:@"Round: %i", roundNumber];
     
     self.previousRoundButton.enabled = (self.roundNumber > 1);
-    self.nextRoundButton.enabled = [self.roundsInfo objectForKey:[NSNumber numberWithInt:roundNumber + 1]];
+    self.nextRoundButton.enabled = (BOOL)[self.roundsInfo objectForKey:[NSNumber numberWithInt:roundNumber + 1]];
     
     // Truth Booth
     NSArray *pair = [roundInfo objectForKey:KEY_TRUTH_BOOTH];
