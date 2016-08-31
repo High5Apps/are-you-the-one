@@ -40,6 +40,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    UIBarButtonItem *nextRoundButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(nextRoundPressed:)];
+    self.navigationItem.rightBarButtonItem = nextRoundButton;
+    self.nextRoundButton = nextRoundButton;
+    
+    UIBarButtonItem *previousRoundButton = [[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStylePlain target:self action:@selector(previousRoundPressed:)];
+    self.navigationItem.leftBarButtonItem = previousRoundButton;
+    self.previousRoundButton = previousRoundButton;
+    
     [self setRound:1];
 }
 

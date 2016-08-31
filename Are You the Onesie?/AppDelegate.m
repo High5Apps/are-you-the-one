@@ -21,11 +21,6 @@
     // Override point for customization after application launch.
 
     PlayerAdderVC *playerAdderVC = [[PlayerAdderVC alloc] initWithNibName:@"PlayerAdderVC" bundle:nil];
-    UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleDone target:playerAdderVC action:@selector(startPressed:)];
-    playerAdderVC.navigationItem.rightBarButtonItem = startButton;
-    playerAdderVC.startButton = startButton;
-//    UIBarButtonItem *testButton = [[UIBarButtonItem alloc] initWithTitle:@"Test" style:UIBarButtonItemStylePlain target:playerAdderVC action:@selector(testPressed:)];
-//    playerAdderVC.navigationItem.leftBarButtonItem = testButton;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:playerAdderVC];
     navigationController.navigationBar.translucent = NO;

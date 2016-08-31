@@ -21,6 +21,13 @@
     
     [self setTitle:@"Add Players"];
     
+    UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleDone target:self action:@selector(startPressed:)];
+    self.navigationItem.rightBarButtonItem = startButton;
+    self.startButton = startButton;
+
+//    UIBarButtonItem *testButton = [[UIBarButtonItem alloc] initWithTitle:@"Test" style:UIBarButtonItemStylePlain target:self action:@selector(testPressed:)];
+//    self.navigationItem.leftBarButtonItem = testButton;
+    
     self.guys = [NSMutableArray array];
     self.girls = [NSMutableArray array];
     
@@ -58,14 +65,6 @@
     roundVC.delegate = self;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:roundVC];
     navigationController.navigationBar.translucent = NO;
-    
-    UIBarButtonItem *nextRoundButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:roundVC action:@selector(nextRoundPressed:)];
-    roundVC.navigationItem.rightBarButtonItem = nextRoundButton;
-    roundVC.nextRoundButton = nextRoundButton;
-    
-    UIBarButtonItem *previousRoundButton = [[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStylePlain target:roundVC action:@selector(previousRoundPressed:)];
-    roundVC.navigationItem.leftBarButtonItem = previousRoundButton;
-    roundVC.previousRoundButton = previousRoundButton;
     
     [self presentViewController:navigationController animated:YES completion:nil];
 }
