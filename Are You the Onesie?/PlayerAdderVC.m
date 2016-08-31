@@ -88,15 +88,21 @@
 #pragma mark - Helpers
 
 - (void)addName:(NSString *)name isGuy:(BOOL)isGuy{
+    UITableView *tableview;
+    NSMutableArray *dataSource;
     if (isGuy) {
-        [self.guys addObject:name];
-        [self.guyTable setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
-        [self.guyTable reloadData];
+        tableview = self.guyTable;
+        dataSource = self.guys;
     }else{
-        [self.girls addObject:name];
-        [self.girlTable setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
-        [self.girlTable reloadData];
+        tableview = self.girlTable;
+        dataSource = self.girls;
     }
+    
+    [tableview setContentOffset:CGPointMake(0, 0) animated:YES];
+    
+    [dataSource insertObject:name atIndex:0];
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [tableview insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     self.startButton.enabled = [self shouldEnableStart];
 }
@@ -174,6 +180,7 @@
     UITableViewCell *nameCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!nameCell) {
         nameCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        nameCell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     
     BOOL isGuyCell = (tableView == self.guyTable);
