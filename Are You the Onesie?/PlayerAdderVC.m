@@ -56,7 +56,18 @@
     
     RoundVC *roundVC = [[RoundVC alloc] initWithGuys:self.guys girls:self.girls matches:matches];
     roundVC.delegate = self;
-    [self presentViewController:roundVC animated:YES completion:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:roundVC];
+    navigationController.navigationBar.translucent = NO;
+    
+    UIBarButtonItem *nextRoundButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:roundVC action:@selector(nextRoundPressed:)];
+    roundVC.navigationItem.rightBarButtonItem = nextRoundButton;
+    roundVC.nextRoundButton = nextRoundButton;
+    
+    UIBarButtonItem *previousRoundButton = [[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStylePlain target:roundVC action:@selector(previousRoundPressed:)];
+    roundVC.navigationItem.leftBarButtonItem = previousRoundButton;
+    roundVC.previousRoundButton = previousRoundButton;
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (IBAction)testPressed:(id)sender{

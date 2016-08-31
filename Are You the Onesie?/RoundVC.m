@@ -96,10 +96,10 @@
     
     NSDictionary *roundInfo = [self.roundsInfo objectForKey:[NSNumber numberWithInt:roundNumber]];
     
-    self.roundLabel.text = [NSString stringWithFormat:@"Round: %i", roundNumber];
+    self.title = [NSString stringWithFormat:@"Round: %i", roundNumber];
     
-    self.previousRoundButton.hidden = (self.roundNumber == 1);
-    self.nextRoundButton.hidden = ([self.roundsInfo objectForKey:[NSNumber numberWithInt:roundNumber + 1]] == nil);
+    self.previousRoundButton.enabled = (self.roundNumber > 1);
+    self.nextRoundButton.enabled = [self.roundsInfo objectForKey:[NSNumber numberWithInt:roundNumber + 1]];
     
     // Truth Booth
     NSArray *pair = [roundInfo objectForKey:KEY_TRUTH_BOOTH];
@@ -194,7 +194,7 @@
         [self.quitButton setTitle:@"New Game" forState:UIControlStateNormal];
     }else {
         [self.roundsInfo setObject:[NSMutableDictionary dictionary] forKey:[NSNumber numberWithInt:self.roundNumber + 1]];
-        self.nextRoundButton.hidden = NO;
+        self.nextRoundButton.enabled = YES;
     }
 }
 
