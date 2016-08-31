@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationBar.topItem.title = @"The Light Ceremony";
+    self.title = @"The Light Ceremony";
 }
 
 - (void)didReceiveMemoryWarning {

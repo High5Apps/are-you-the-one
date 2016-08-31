@@ -52,6 +52,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelPressed:)];
+    self.navigationItem.rightBarButtonItem = cancelButton;
+    self.cancelButton = cancelButton;
+    
     self.guyButtons = [NSMutableArray array];
     [self.guyButtons addObject:self.guy1];
     [self.guyButtons addObject:self.guy2];

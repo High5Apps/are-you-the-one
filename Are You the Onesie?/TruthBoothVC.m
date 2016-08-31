@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationBar.topItem.title = @"The Truth Booth";
+    self.title = @"The Truth Booth";
 }
 
 - (void)didReceiveMemoryWarning {

@@ -61,13 +61,21 @@
 - (IBAction)truthBoothPressed:(id)sender{
     TruthBoothVC *truthBoothVC = [[TruthBoothVC alloc] initWithGuys:self.guys girls:self.girls matches:self.matches];
     truthBoothVC.delegate = self;
-    [self presentViewController:truthBoothVC animated:YES completion:nil];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:truthBoothVC];
+    navigationController.navigationBar.translucent = NO;
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (IBAction)lightCeremonyPressed:(id)sender{
     LightCeremonyVC *lightCeremonyVC = [[LightCeremonyVC alloc] initWithGuys:self.guys girls:self.girls matches:self.matches];
     lightCeremonyVC.delegate = self;
-    [self presentViewController:lightCeremonyVC animated:YES completion:nil];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:lightCeremonyVC];
+    navigationController.navigationBar.translucent = NO;
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (IBAction)quitPressed:(id)sender{
