@@ -92,6 +92,8 @@
     [self.guys addObject:@"Adam"];
     [self.guys addObject:@"Frank"];
     [self.guys addObject:@"John"];
+    [self.guys addObject:@"Jacob"];
+    [self.guys addObject:@"Schmitty"];
     
     [self.girls addObject:@"Catherine"];
     [self.girls addObject:@"Caitlin"];
@@ -101,6 +103,8 @@
     [self.girls addObject:@"Mike"];
     [self.girls addObject:@"Laura"];
     [self.girls addObject:@"Amber"];
+    [self.girls addObject:@"Ashley I."];
+    [self.girls addObject:@"Carly"];
     
     self.startButton.enabled = [self shouldEnableStart];
     [self.guyTable reloadData];
@@ -139,7 +143,7 @@
 
 - (BOOL)shouldEnableAddButton{
     NSString *name = self.nameField.text;
-    return (name.length > 0) && ![self.guys containsObject:name] && ![self.girls containsObject:name] && (self.girls.count < 8);
+    return (name.length > 0) && ![self.guys containsObject:name] && ![self.girls containsObject:name];
 }
 
 - (BOOL)shouldAddGuy{

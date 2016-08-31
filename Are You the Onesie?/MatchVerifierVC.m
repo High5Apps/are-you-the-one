@@ -35,16 +35,6 @@
         self.girls = girls;
         self.matches = matches;
         self.lockedPairs = [NSMutableArray arrayWithCapacity:self.guys.count];
-        
-        self.pairColors = @[
-                            [UIColor redColor],
-                            [UIColor orangeColor],
-                            [UIColor greenColor],
-                            [UIColor cyanColor],
-                            [UIColor purpleColor],
-                            [UIColor yellowColor],
-                            [UIColor brownColor],
-                            [UIColor darkGrayColor]];
     }
     return self;
 }
@@ -57,37 +47,46 @@
     self.navigationItem.rightBarButtonItem = cancelButton;
     self.cancelButton = cancelButton;
     
-    self.guyButtons = [NSMutableArray array];
-    [self.guyButtons addObject:self.guy1];
-    [self.guyButtons addObject:self.guy2];
-    [self.guyButtons addObject:self.guy3];
-    [self.guyButtons addObject:self.guy4];
-    [self.guyButtons addObject:self.guy5];
-    [self.guyButtons addObject:self.guy6];
-    [self.guyButtons addObject:self.guy7];
-    [self.guyButtons addObject:self.guy8];
-    
-    self.girlButtons = [NSMutableArray array];
-    [self.girlButtons addObject:self.girl1];
-    [self.girlButtons addObject:self.girl2];
-    [self.girlButtons addObject:self.girl3];
-    [self.girlButtons addObject:self.girl4];
-    [self.girlButtons addObject:self.girl5];
-    [self.girlButtons addObject:self.girl6];
-    [self.girlButtons addObject:self.girl7];
-    [self.girlButtons addObject:self.girl8];
-    
-    for (int i = 0; i < self.guys.count; i++) {
-        UIButton *guyButton = [self.guyButtons objectAtIndex:i];
-        [guyButton setTitle:(NSString *)[self.guys objectAtIndex:i] forState:UIControlStateNormal];
-        [self addActionsToNameButton:guyButton];
-        
-        UIButton *girlButton = [self.girlButtons objectAtIndex:i];
-        [girlButton setTitle:(NSString *)[self.girls objectAtIndex:i] forState:UIControlStateNormal];
-        [self addActionsToNameButton:girlButton];
-    }
+    [self addNameButtons];
     
     [self setColorSchemeDark:NO];
+}
+
+- (void)addNameButtons{
+    float buttonHeight = 44.0;
+    float margin = 0.0;
+    
+    self.guyButtons = [NSMutableArray arrayWithCapacity:self.guys.count];
+    self.girlButtons = [NSMutableArray arrayWithCapacity:self.girls.count];
+    
+    for (UIScrollView *scrollView in @[self.guyScroller, self.girlScroller]) {
+        NSArray *nameSource;
+        NSMutableArray *buttonArray;
+        if (scrollView == self.guyScroller) {
+            nameSource = self.guys;
+            buttonArray = self.guyButtons;
+        }else{
+            nameSource = self.girls;
+            buttonArray = self.girlButtons;
+        }
+        
+        float y = 0;
+        for (int i = 0; i < nameSource.count; i++) {
+            NSString *name = [nameSource objectAtIndex:i];
+            y = i * (buttonHeight + margin);
+            
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+            button.frame = CGRectMake(0, y, scrollView.frame.size.width, buttonHeight);
+            [button setTitle:name forState:UIControlStateNormal];
+            [scrollView addSubview:button];
+            
+            [self addActionsToNameButton:button];
+
+            [buttonArray addObject:button];
+        }
+        
+        scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, y + buttonHeight);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,35 +103,15 @@
     [nameButton setEnabled:YES];
 }
 
-- (BOOL)isGuyFromSender:(id)sender{
-    UIButton *button = (UIButton *)sender;
-    int tag = (int)button.tag;
-    return tag % 2 == 0;
-}
-
-- (UIButton *)buttonFromSender:(id)sender{
-    UIButton *button = (UIButton *)sender;
-    int tag = (int)button.tag;
-    BOOL isGuy = tag % 2 == 0;
-    int nameIndex = tag / 2;
-    
-    if (isGuy) {
-        button = [self.guyButtons objectAtIndex:nameIndex];
-    }else{
-        button = [self.girlButtons objectAtIndex:nameIndex];
-    }
-    
-    return button;
-}
-
 - (IBAction)cancelPressed:(id)sender{
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)namePressedDown:(id)sender{
-    UIButton *nameButton = [self buttonFromSender:sender];
+    UIButton *nameButton = (UIButton *)sender;
     NSString *name = nameButton.titleLabel.text;
-    BOOL isGuy = [self isGuyFromSender:sender];
+    BOOL isGuy = [self.guyButtons containsObject:sender];
+;
     
     if (isGuy) {
         self.pressedGuy = name;
@@ -212,7 +191,7 @@
 - (void)nameUnpressed:(id)sender{
     self.lockLabel.text = @"";
     
-    BOOL isGuy = [self isGuyFromSender:sender];
+    BOOL isGuy = [self.guyButtons containsObject:sender];
     
     if (isGuy) {
         self.guyLabel.hidden = YES;
@@ -259,7 +238,7 @@
     UIButton *guyButton = [self buttonForName:lockedPair[0] isGuy:YES];
     UIButton *girlButton = [self buttonForName:lockedPair[1] isGuy:NO];
     
-    UIColor *buttonColor = [self.pairColors objectAtIndex:self.lockedPairs.count];
+    UIColor *buttonColor = [self colorForPairNumber:(int)self.lockedPairs.count];
     [guyButton setTitleColor:buttonColor forState:UIControlStateNormal];
     [girlButton setTitleColor:buttonColor forState:UIControlStateNormal];
     
@@ -275,6 +254,39 @@
         int i = (int)[self.girls indexOfObject:name];
         return [self.girlButtons objectAtIndex:i];
     }
+}
+
+- (UIColor *)colorForPairNumber:(int)pairNumber{
+    if (!self.pairColors) {
+        NSArray *firstPairColors = @[
+                            [UIColor purpleColor],
+                            [UIColor orangeColor],
+                            [UIColor redColor],
+                            [UIColor greenColor],
+                            [UIColor cyanColor],
+                            [UIColor yellowColor],
+                            [UIColor brownColor]];
+        
+        NSMutableArray *pairColors = [NSMutableArray arrayWithCapacity:self.guys.count];
+        for (int i = 0; i < self.guys.count; i++) {
+            if (i < firstPairColors.count) {
+                [pairColors addObject:[firstPairColors objectAtIndex:i]];
+            }else {
+                [pairColors addObject:[self randomColor]];
+            }
+        }
+        
+        self.pairColors = pairColors;
+    }
+    
+    return [self.pairColors objectAtIndex:pairNumber];
+}
+
+- (UIColor *)randomColor{
+    CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
+    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
+    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
 
 @end
