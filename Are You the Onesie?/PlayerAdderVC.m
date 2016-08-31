@@ -18,10 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self setTitle:@"Add Players"];
+    
     self.guys = [NSMutableArray array];
     self.girls = [NSMutableArray array];
     
     self.nameField.delegate = self;
+    
+    self.startButton.enabled = [self shouldEnableStart];
 }
 
 - (void)didReceiveMemoryWarning {

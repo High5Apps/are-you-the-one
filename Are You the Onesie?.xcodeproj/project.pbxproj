@@ -10,7 +10,6 @@
 		C20CF8221D7258ED00E4EC0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8211D7258ED00E4EC0A /* main.m */; };
 		C20CF8251D7258ED00E4EC0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8241D7258ED00E4EC0A /* AppDelegate.m */; };
 		C20CF8281D7258ED00E4EC0A /* PlayerAdderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8271D7258ED00E4EC0A /* PlayerAdderVC.m */; };
-		C20CF82B1D7258ED00E4EC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20CF8291D7258ED00E4EC0A /* Main.storyboard */; };
 		C20CF82D1D7258ED00E4EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20CF82C1D7258ED00E4EC0A /* Assets.xcassets */; };
 		C20CF8301D7258ED00E4EC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20CF82E1D7258ED00E4EC0A /* LaunchScreen.storyboard */; };
 		C20CF83B1D7258EE00E4EC0A /* Are_You_the_Onesie_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF83A1D7258EE00E4EC0A /* Are_You_the_Onesie_Tests.m */; };
@@ -19,6 +18,7 @@
 		C2DCE3741D72628500E07036 /* RoundVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2DCE3721D72628500E07036 /* RoundVC.xib */; };
 		C2DCE3781D72651C00E07036 /* MatchVerifierVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DCE3761D72651C00E07036 /* MatchVerifierVC.m */; };
 		C2DCE3791D72651C00E07036 /* MatchVerifierVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2DCE3771D72651C00E07036 /* MatchVerifierVC.xib */; };
+		C2F7A2551D7746FF007F6B8D /* PlayerAdderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F7A2541D7746FF007F6B8D /* PlayerAdderVC.xib */; };
 		C2FA6DBB1D73B934009DA462 /* TruthBoothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA6DBA1D73B934009DA462 /* TruthBoothVC.m */; };
 		C2FA6DBE1D73BEDE009DA462 /* LightCeremonyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA6DBD1D73BEDE009DA462 /* LightCeremonyVC.m */; };
 /* End PBXBuildFile section */
@@ -47,7 +47,6 @@
 		C20CF8241D7258ED00E4EC0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C20CF8261D7258ED00E4EC0A /* PlayerAdderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerAdderVC.h; sourceTree = "<group>"; };
 		C20CF8271D7258ED00E4EC0A /* PlayerAdderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerAdderVC.m; sourceTree = "<group>"; };
-		C20CF82A1D7258ED00E4EC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C20CF82C1D7258ED00E4EC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C20CF82F1D7258ED00E4EC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C20CF8311D7258ED00E4EC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		C2DCE3751D72651C00E07036 /* MatchVerifierVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchVerifierVC.h; sourceTree = "<group>"; };
 		C2DCE3761D72651C00E07036 /* MatchVerifierVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchVerifierVC.m; sourceTree = "<group>"; };
 		C2DCE3771D72651C00E07036 /* MatchVerifierVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchVerifierVC.xib; sourceTree = "<group>"; };
+		C2F7A2541D7746FF007F6B8D /* PlayerAdderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerAdderVC.xib; sourceTree = "<group>"; };
 		C2FA6DB91D73B934009DA462 /* TruthBoothVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TruthBoothVC.h; sourceTree = "<group>"; };
 		C2FA6DBA1D73B934009DA462 /* TruthBoothVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TruthBoothVC.m; sourceTree = "<group>"; };
 		C2FA6DBC1D73BEDE009DA462 /* LightCeremonyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightCeremonyVC.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				C20CF8241D7258ED00E4EC0A /* AppDelegate.m */,
 				C20CF8261D7258ED00E4EC0A /* PlayerAdderVC.h */,
 				C20CF8271D7258ED00E4EC0A /* PlayerAdderVC.m */,
-				C20CF8291D7258ED00E4EC0A /* Main.storyboard */,
+				C2F7A2541D7746FF007F6B8D /* PlayerAdderVC.xib */,
 				C2DCE3701D72628500E07036 /* RoundVC.h */,
 				C2DCE3711D72628500E07036 /* RoundVC.m */,
 				C2DCE3721D72628500E07036 /* RoundVC.xib */,
@@ -270,11 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F7A2551D7746FF007F6B8D /* PlayerAdderVC.xib in Resources */,
 				C20CF8301D7258ED00E4EC0A /* LaunchScreen.storyboard in Resources */,
 				C2DCE3741D72628500E07036 /* RoundVC.xib in Resources */,
 				C2DCE3791D72651C00E07036 /* MatchVerifierVC.xib in Resources */,
 				C20CF82D1D7258ED00E4EC0A /* Assets.xcassets in Resources */,
-				C20CF82B1D7258ED00E4EC0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,14 +341,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C20CF8291D7258ED00E4EC0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C20CF82A1D7258ED00E4EC0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C20CF82E1D7258ED00E4EC0A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
