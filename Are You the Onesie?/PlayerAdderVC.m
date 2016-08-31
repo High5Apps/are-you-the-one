@@ -41,6 +41,20 @@
     self.startButton.enabled = [self shouldEnableStart];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    
+    [self.nameField becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+}
+
 - (void)styleNameField{
     self.nameField.layer.cornerRadius = 0.0f;
     self.nameField.layer.masksToBounds = YES;
@@ -235,6 +249,20 @@
     }
     
     return YES;
+}
+
+#pragma mark - NSNotificationCenter methods
+- (void)keyboardWasShown:(NSNotification *)notification{
+    float keyboardHeight = [[[notification userInfo] valueForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    float keyboardY = self.view.frame.size.height - keyboardHeight;
+    
+    CGRect guyFrame = self.guyTable.frame;
+    float guyTableviewHeight = keyboardY - guyFrame.origin.y;
+    self.guyTable.frame = CGRectMake(guyFrame.origin.x, guyFrame.origin.y, guyFrame.size.width, guyTableviewHeight);
+    
+    CGRect girlFrame = self.girlTable.frame;
+    float girlTableviewHeight = keyboardY - girlFrame.origin.y;
+    self.girlTable.frame = CGRectMake(girlFrame.origin.x, girlFrame.origin.y, girlFrame.size.width, girlTableviewHeight);
 }
 
 @end
