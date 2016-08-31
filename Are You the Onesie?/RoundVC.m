@@ -155,7 +155,11 @@
     
     int pairCount = (int)self.guys.count;
     
-    self.lightCeremonyInstructions.text = [NSString stringWithFormat:@"This round, the %@ get to pick who they think their perfect match is. If all %i lights are illuminated, you're all going home with...\nONE MILLION DOLLARS!!!", gender, pairCount];
+    // Temporarily setting/unsetting selectable is a workaround for a bug where the font is reset described here:
+    // http://stackoverflow.com/questions/19049917/uitextview-font-is-being-reset-after-settext
+    self.lightCeremonyInstructions.selectable = YES;
+    self.lightCeremonyInstructions.text = [NSString stringWithFormat:@"This round, the %@ get to pick who they think their perfect match is. If all %i lights are illuminated, you're all going home with...\n\"ONE MILLION DOLLARS!!!\"", gender, pairCount];
+    self.lightCeremonyInstructions.selectable = NO;
 }
 
 - (void)setTruthBoothInfoForPair:(NSArray *)pair{
