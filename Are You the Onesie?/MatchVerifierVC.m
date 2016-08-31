@@ -7,6 +7,7 @@
 //
 
 #import "MatchVerifierVC.h"
+#import <AudioToolbox/AudioServices.h>
 #import "Colors.h"
 
 #define LOCK_SECONDS 4
@@ -232,6 +233,8 @@
 - (void)onPairLocked:(NSArray *)lockedPair{
     [self.lockTimer invalidate];
     self.lockTimer = nil;
+    
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     
     [self setColorSchemeDark:NO];
     
