@@ -11,7 +11,6 @@
 		C20CF8251D7258ED00E4EC0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8241D7258ED00E4EC0A /* AppDelegate.m */; };
 		C20CF8281D7258ED00E4EC0A /* PlayerAdderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8271D7258ED00E4EC0A /* PlayerAdderVC.m */; };
 		C20CF82D1D7258ED00E4EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20CF82C1D7258ED00E4EC0A /* Assets.xcassets */; };
-		C20CF8301D7258ED00E4EC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20CF82E1D7258ED00E4EC0A /* LaunchScreen.storyboard */; };
 		C20CF83B1D7258EE00E4EC0A /* Are_You_the_Onesie_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF83A1D7258EE00E4EC0A /* Are_You_the_Onesie_Tests.m */; };
 		C20CF8461D7258EE00E4EC0A /* Are_You_the_Onesie_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C20CF8451D7258EE00E4EC0A /* Are_You_the_Onesie_UITests.m */; };
 		C2DCE3731D72628500E07036 /* RoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DCE3711D72628500E07036 /* RoundVC.m */; };
@@ -49,7 +48,6 @@
 		C20CF8261D7258ED00E4EC0A /* PlayerAdderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerAdderVC.h; sourceTree = "<group>"; };
 		C20CF8271D7258ED00E4EC0A /* PlayerAdderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerAdderVC.m; sourceTree = "<group>"; };
 		C20CF82C1D7258ED00E4EC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C20CF82F1D7258ED00E4EC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C20CF8311D7258ED00E4EC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C20CF8361D7258EE00E4EC0A /* Are You the Onesie?Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Are You the Onesie?Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20CF83A1D7258EE00E4EC0A /* Are_You_the_Onesie_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Are_You_the_Onesie_Tests.m; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 				C2FA6DBC1D73BEDE009DA462 /* LightCeremonyVC.h */,
 				C2FA6DBD1D73BEDE009DA462 /* LightCeremonyVC.m */,
 				C20CF82C1D7258ED00E4EC0A /* Assets.xcassets */,
-				C20CF82E1D7258ED00E4EC0A /* LaunchScreen.storyboard */,
 				C20CF8311D7258ED00E4EC0A /* Info.plist */,
 				C20CF8201D7258ED00E4EC0A /* Supporting Files */,
 			);
@@ -284,7 +281,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F7A2551D7746FF007F6B8D /* PlayerAdderVC.xib in Resources */,
-				C20CF8301D7258ED00E4EC0A /* LaunchScreen.storyboard in Resources */,
 				C2DCE3741D72628500E07036 /* RoundVC.xib in Resources */,
 				C2DCE3791D72651C00E07036 /* MatchVerifierVC.xib in Resources */,
 				C20CF82D1D7258ED00E4EC0A /* Assets.xcassets in Resources */,
@@ -354,17 +350,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		C20CF82E1D7258ED00E4EC0A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C20CF82F1D7258ED00E4EC0A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		C20CF8481D7258EE00E4EC0A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -403,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -441,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -452,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Are You the Onesie?/Info.plist";
@@ -459,6 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.high5.Are-You-the-Onesie-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Are You the Onesie?/Info.plist";
@@ -473,6 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.high5.Are-You-the-Onesie-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

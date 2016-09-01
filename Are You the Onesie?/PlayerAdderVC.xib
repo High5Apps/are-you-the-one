@@ -62,7 +62,7 @@
             </subviews>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="314" y="344"/>
+            <point key="canvasLocation" x="291" y="294"/>
         </view>
     </objects>
 </document>
